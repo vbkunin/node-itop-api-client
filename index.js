@@ -31,7 +31,7 @@ class ITopApiClient {
      * @param {boolean} [basicAuth=true]
      * @returns {Promise}
      */
-    connect(uri, user, password, comment = 'iTop API client', apiVersion = 1.3, basicAuth = true) {
+    connect({ uri, user, password, comment = 'iTop API client', apiVersion = 1.3, basicAuth = true }) {
         this._uri = uri;
         this._user = user;
         this._password = password;
