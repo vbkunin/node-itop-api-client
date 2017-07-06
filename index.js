@@ -161,7 +161,7 @@ class ITopApiClient {
      * @param {boolean} [retFieldsOnly]
      * @returns {Promise}
      */
-    get(objClass, objKey, outputFields, retMode, retFieldsOnly) {
+    get({ objClass, objKey, outputFields, retMode, retFieldsOnly }) {
         let jsonData = {
             operation: 'core/get',
             'class': objClass,
@@ -220,7 +220,7 @@ class ITopApiClient {
      * @param {boolean} [retFieldsOnly]
      * @returns {Promise}
      */
-    update(objClass, objKey, fields, outputFields, retMode, retFieldsOnly) {
+    update({ objClass, objKey, fields, outputFields, retMode, retFieldsOnly }) {
         let jsonData = {
             operation: 'core/update',
             'class': objClass,
