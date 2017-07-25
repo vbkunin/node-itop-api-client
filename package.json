@@ -4,13 +4,18 @@
   "description": "Client for Combodo iTop API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "author": "Vladimir Kunin",
   "license": "ISC",
   "dependencies": {
     "debug": "^2.6.8",
-    "mime": "^1.3.6",
-    "request": "^2.81.0"
+    "node-fetch": "^1.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^4.0.0",
+    "mocha": "^3.4.2"
   }
 }
