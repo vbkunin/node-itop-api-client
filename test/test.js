@@ -150,4 +150,5 @@ describe('node-itop-api-client', () => {
         })
     });
 
+    // TODO: test stimulus
 });

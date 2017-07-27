@@ -1,6 +1,6 @@
 {
-  "name": "@vbkunin/itop-api-client",
-  "version": "0.1.0",
+  "name": "node-itop-api-client",
+  "version": "0.1.1",
   "description": "Client for Combodo iTop API",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,15 @@
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "chai-as-promised": "^7.1.1",
     "dotenv": "^4.0.0",
     "mocha": "^3.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vbkunin/node-itop-api-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vbkunin/node-itop-api-client/issues"
+  },
+  "homepage": "https://github.com/vbkunin/node-itop-api-client"
 }
