@@ -73,7 +73,14 @@ class ITopApiClient {
         };
 
         let headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
-        if (this._basicAuth) headers['Authorization'] = 'Basic ' + new Buffer(this._user + ':' + this._password, 'utf8').toString('base64');
+        if (this._basicAuth) {
+            headers['Authorization'] = 'Basic ' + new Buffer(this._user + ':' + this._password, 'utf8').toString('base64');
+        }
+        else {
+            // In case we don't want to use Basic Auth, we fill data (see regression at https://sourceforge.net/p/itop/tickets/1061/)
+            data.auth_user = this._user;
+            data.auth_pwd = this._password;
+        }
 
         return fetch(this._url, {
             method: 'POST',
